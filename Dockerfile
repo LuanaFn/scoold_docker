@@ -9,7 +9,9 @@ ENV BOOT_SLEEP=0 \
 
 RUN addgroup -S scoold && adduser -S -G scoold scoold && \
 	mkdir -p /scoold/clone && \
-	chown -R scoold:scoold /scoold
+	chown -R scoold:scoold /scoold && \
+	mkdir -p /para/clone && \
+	chown -R scoold:scoold /para
 
 USER scoold
 
