@@ -18,7 +18,8 @@ WORKDIR /scoold
 RUN git clone --depth=1 https://github.com/Erudika/scoold /scoold/clone && \
 	cd /scoold/clone && \
 	mvn -DskipTests=true clean package && \
-	mv target/scoold-*.jar /scoold/
+	mv target/scoold-*.jar /scoold/ && \
+	git clone https://github.com/Erudika/para.git /para/clone
 
 EXPOSE 8000
 
